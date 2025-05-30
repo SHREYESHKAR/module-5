@@ -8,7 +8,7 @@ To write a C Program to find area of rectangle using pointer.
 ## ALGORITHM
 1.	Start the program.
 2.	Read two numbers.
-3.	Calculate the area of rectangle using the formula area=(x)(*y)
+3.	Calculate the area of rectangle using the formula area=(*x)*(*y)
 4.	Display the result.
 5.	Stop the program.
 
@@ -19,6 +19,7 @@ To write a C Program to find area of rectangle using pointer.
 
 int main() {
     int x, y, area;
+    int *ptr1 = &x;
     int *ptr = &y;
 
     printf("Enter the length of the rectangle: ");
@@ -27,7 +28,7 @@ int main() {
     printf("Enter the breadth of the rectangle: ");
     scanf("%d", &y);
 
-    area = x * (*ptr);
+    area = (*ptr1) * (*ptr);
 
     printf("Area of the rectangle: %d\n", area);
 
